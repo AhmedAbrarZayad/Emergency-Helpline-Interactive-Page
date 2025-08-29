@@ -25,7 +25,7 @@
                     <h1 class="hind-madurai-bold" id="coin-count">100</h1>
                     <img src="assets/coin.png" alt="Coin Icon" class="w-[30px] h-[30px]">
                 </div>
-                <button class="btn btn-active btn-warning rounded-full text-white hind-madurai-bold">0 Copy</button>
+                <button class="btn btn-active btn-warning rounded-full text-white hind-madurai-bold"><span id="copy-count">0</span> Copy</button>
             </div>
         </div>
         <div class="banner linear py-5">
@@ -34,8 +34,8 @@
             <p class="text-center text-white pt-2 px-4 hind-madurai-semibold">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
         </div>
     </header>
-    <main class="bg-amber-50">
-        <div class="cards flex flex-col gap-10 p-4 sm:grid sm:grid-cols-4 sm:grid-rows-3 sm:gap-4 sm:p-10">
+    <main class="bg-amber-50 flex flex-col sm:flex-row py-10 px-2">
+        <div class="cards flex flex-col gap-10 p-4 sm:grid sm:grid-cols-3 sm:grid-rows-3 sm:gap-4 sm:pl-2 sm:pt-0 sm:pb-0 sm:w-[80%] sm:self-start">
             <div class="card bg-white p-3 rounded-lg shadow-md flex flex-col">
                 <div class="flex items-center justify-between">
                     <img src="assets/emergency.png" alt="Emergency Icon" class="w-auto h-auto max-w-[40px] sm:max-w-[60px]">
@@ -46,7 +46,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">999</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">All</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">999</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Police</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -74,14 +74,8 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">999</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Fire</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
-                </div>
-            </div>
-            <div class="call-history bg-white p-3 rounded-lg shadow-md flex flex-col row-span-3 order-last sm:order-none">
-                <div class="flex items-center justify-between mb-10">
-                    <h1><i class="fa-regular fa-clock"></i><span class="ml-2">Call History</span></h1>
-                    <button class="btn btn-warning rounded-full" id="clear">Clear</button>
                 </div>
             </div>
             <div class="card bg-white p-3 rounded-lg shadow-md flex flex-col">
@@ -94,7 +88,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-10">1994-999999</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Ambulance</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -108,7 +102,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">109</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Help</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -122,7 +116,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">106</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Govt.</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -136,7 +130,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">16216</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Electricity</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -150,7 +144,7 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">16445</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">NGO</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
             </div>
@@ -164,9 +158,15 @@
                 <h1 class="number hind-madurai-bold text-2xl mt-auto">163</h1>
                 <span class="badge bg-gray-300 rounded-full mt-1">Travel</span>
                 <div class="flex flex-wrap gap-2 items-center mt-10">
-                    <button class="btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i>Copy</button>
+                    <button class="copy-btn btn btn-neutral btn-outline flex-1"><i class="fa-regular fa-copy"></i><span class="copy">Copy</span></button>
                     <button class="call btn btn-warning flex-1"><i class="fa-solid fa-phone"></i>Call</button>
                 </div>
+            </div>
+        </div>
+        <div class="call-history bg-white p-3 rounded-lg shadow-md flex flex-col sm:w-[20%]">
+            <div class="flex items-center justify-between mb-10">
+                <h1><i class="fa-regular fa-clock"></i><span class="ml-2">Call History</span></h1>
+                <button class="btn btn-warning rounded-full" id="clear">Clear</button>
             </div>
         </div>
     </main>

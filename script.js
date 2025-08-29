@@ -48,6 +48,31 @@ function addCallHistory(serviceName, serviceNumber, time){
     document.querySelector('.call-history').appendChild(historyCard);
 }
 
+function addCopy(){
+    const copyCount = document.getElementById("copy-count");
+    copyCount.innerText = parseInt(copyCount.innerText) + 1;
+}
+
+function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                alert(`Copied ${text} to clipboard!`);
+                addCopy();
+            })
+            .catch(err => {
+                console.error('Clipboard API failed:', err);
+                fallbackCopy(text);
+            });
+    } else {
+        fallbackCopy(text);
+    }
+}
+
+function getAllCopyBtn(){
+    return document.querySelectorAll('.copy-btn');
+}
+
 const mainHearts = getAllHearts('main');
 
 for(const heart of mainHearts){
@@ -81,3 +106,12 @@ document.getElementById("clear").addEventListener("click", function(){
         </div>
     `;
 });
+
+const copyButton = getAllCopyBtn();
+
+for(const btn of copyButton){
+    btn.addEventListener('click', function(event){
+        const serviceNumber = getServiceNumber(event);
+        copyToClipboard(serviceNumber);
+    });
+}
