@@ -72,3 +72,12 @@ for(const call of mainCalls){
         }
     });
 }
+
+document.getElementById("clear").addEventListener("click", function(){
+    document.querySelector('.call-history').innerHTML = `
+        <div class="flex items-center justify-between mb-10">
+            <h1><i class="fa-regular fa-clock"></i><span class="ml-2">Call History</span></h1>
+            <button class="btn btn-warning rounded-full" id="clear">Clear</button>
+        </div>
+    `;
+});
